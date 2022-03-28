@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        #text{
+            color: red;
+            font-weight: bold;
+            font-size: 23px;
+        }
+        p{
+            color: wheat;
+            background-color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        id,
+        etiket,
+        class
+    -->
+    <div class="box"></div>
+    <span id="text">Wissen Akademie</span>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus numquam iure dolorem assumenda officiis illum eaque omnis magni aliquam reprehenderit!</p>
+    <button onclick="textChange()">Text Change</button>
+    <button onclick="boxChange()">Box Change</button>
+    <button onclick="pChange()">p Change</button>
+    <script>
+        function textChange(){
+            $("#text").css("color","blue");
+        }
+        function boxChange(){
+            $(".box").css("background-color","yellow");
+        }
+        function pChange(){
+            $("p").css("background-color","brown");
+        }
+
+    </script>
+</body>
+
+</html>

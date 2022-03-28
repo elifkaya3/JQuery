@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    span{
+        background-color: blue;
+    }
+</style>
+</head>
+<body>
+    <button id="text-get" >Text() -Get</button>
+    <button id="html-get" >html() -Get</button>
+    <button id="val-get" >val() -Get</button>
+    <button id="text-set" >Text() -Set</button>
+    <button id="html-set" >html() -Set</button>
+    <button id="val-set" >val() -Set</button>
+    <p>Lorem ipsum, <span>dolor</span> sit amet consectetur adipisicing elit. Repudiandae nisi debitis ad dolore quod totam quasi quae molestias quos corporis?</p>
+    <input type="text" value="Tamam" name="" id="">
+    <script>
+        $(document).ready(function(){
+            $("#text-get").click(function(){
+                var text =$("p").text();
+                alert(text);
+            })
+
+            $("#html-get").click(function(){
+                var html =$("p").html();
+                alert(html);
+            })
+
+            $("#val-get").click(function(){
+                var val =$("input").val();
+                alert(val);
+            })
+
+
+            
+            $("#html-set").click(function(){
+                $("p").html("<h1>HEllo World</h>");
+            })
+            $("#text-set").click(function(){
+                $("p").text("Selam bu değişen bir text");
+            })
+             $("#val-set").click(function(){
+                $("input").val("JQuery");
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        div {
+            margin: 0;
+            padding:100px;
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="uygula">Uygula</button>
+    <button id="uygula2">Uygula2</button>
+    <br><br>
+    <div></div>
+    <script>
+        $(document).ready(function () {
+            $("#uygula").click(function () {
+                $("div").width(500);
+                $("div").height(50);
+            })
+        })
+        $(document).ready(function () {
+            $("#uygula").click(function () {
+                $("div").innerWidth(500);
+                $("div").innerHeight(50);
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button id="gizle">Gizle</button>
+    <button id="göster">Göster</button>
+    <button id="toggle">Toggle</button>
+    <script>
+        //HİDE
+        $(document).ready(function(){
+            $("#gizle").click(function(){
+                $("div").hide(1000);
+            })
+        }) 
+        $(document).ready(function(){
+            $("#gizle").click(function(){
+                $("div").hide(1000);//bu süreyi milisaniye türündedri
+            })
+        })
+        $(document).ready(function(){
+            $("#gizle").click(function(){
+                $("div").hide("slow");//süreyi slow,normal,fast 
+            })
+        })
+        //SHOW
+        $(document).ready(function(){
+            $("#göster").click(function(){
+                $("div").show();
+            })
+        })
+        $(document).ready(function(){
+            $("#göster").click(function(){
+                $("div").show(1000);
+            })
+        })
+        $(document).ready(function(){
+            $("#göster").click(function(){
+                $("div").show("fast");//süreyi slow,normal,fast 
+            })
+        })
+
+        //TOGGLE
+        $(document).ready(function(){
+            $("#toggle").click(function(){
+                $("div").toggle();
+            })
+        }) 
+        $(document).ready(function(){
+            $("#toggle").click(function(){
+                $("div").toggle(1000);
+            })
+        })
+        $(document).ready(function(){
+            $("#toggle").click(function(){
+                $("div").toggle("fast");
+            })
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <style>
+       div{
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+    }
+   </style>
+    
+</head>
+<body>
+    <div></div>
+    <button id="fadeOut">FadeOut</button>
+    <button id="fadeIn">FadeIn</button>
+    <button id="FadeToggle">FadeToggle</button>
+    <button id="FadeTo">FadeTo</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#fadeOut").click(function(){
+                $("div").fadeOut(1000);
+            })
+        })
+        $(document).ready(function(){
+            $("#fadeIn").click(function(){
+                $("div").fadeIn(1000);
+            })
+        })
+        $(document).ready(function(){
+            $("#FadeToggle").click(function(){
+                $("div").fadeToggle(1000);
+            })
+        })
+        $(document).ready(function(){
+            $("#FadeTo").click(function(){
+                $("div").fadeTo(3000,0.5);
+            })
+        })
+    </script>
+</body>
+</html>

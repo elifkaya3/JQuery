@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <button id="Append">Append</button>
+    <button id="Prepend">Prepend</button>
+    <button id="After">After</button>
+    <button id="Before">Before</button>
+
+    <ol id="liste">
+        <li>JAvaScript</li>
+        <li>JQuery</li>
+    </ol>
+    <p id="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, delectus.</p>
+    <script>
+        //sona eklme yapar
+        $(document).ready(function(){
+            $("#Append").click(function(){
+                $("#liste").append("<li>Angular</li>");
+                $("#p").append('<span style="color:orange;">Recep,Aslı,Mikail</span>');
+            })
+            //başa eklme yapar
+            $("#Prepend").click(function(){
+                $("#liste").prepend("<li>Angular</li>");
+                $("#p").prepend('<span style="color:blue;">Recep,Aslı,Mikail</span>');
+            })
+            //
+            $("#After").click(function(){
+                $("#liste").after("<li>Bootstrap</li>");
+                $("#p").after('<span style="color:red;">Recep,Aslı,Mikail</span>');
+            })
+            $("#Before").click(function(){
+                $("#liste").before("<li>Bootstrap</li>");
+                $("#p").before('<span style="color:yellow;">Recep,Aslı,Mikail</span>');
+            })
+        })
+    </script>
+</body>
+</html>
