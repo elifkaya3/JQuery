@@ -1,0 +1,90 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.slider-content{
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    position: relative;
+}
+.slide{
+    display: none;
+}
+
+.slider-content .slide img{
+    width: 100%;
+}
+
+.slider-content .prevSlide, 
+.slider-content .nextSlide{
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    padding: 15px;
+    color: rgb(146, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+    width: auto;
+    transition: 0.6s ease;
+}
+ .slider-content .prevSlide:hover,
+.slider-content .nextSlide:hover{
+    background-color: rgba(209, 195, 195, 0.6);
+    text-decoration: none;
+} 
+.slider-content .prevSlide{
+    border-radius: 0px 3px 3px 0px;
+    left: 0px;
+}
+.slider-content .nextSlide{
+     right: 0px;
+    border-radius:3px  0px  0px 3px;
+}
+
+.dots{
+    position: absolute;
+    bottom: 20px;
+}
+
+.dots .dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 3px;
+    background-color: aliceblue;
+    border-radius:50% ;
+    display: inline-block;
+    transition: 0.5s;
+}
+.dots .dot:hover{
+    background-color: blue;
+}
+
+.active{
+    background-color: blue !important;
+}
+
+.captionText{
+    text-align: center;
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 65px;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 23px;
+    background-color: rgba(209, 195, 195, 0.6);
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 2s;
+}
+@keyframes fade{
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}
